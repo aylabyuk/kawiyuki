@@ -20,7 +20,7 @@ export const ArticlesLayout: React.FC<ArticleLayoutProps> = ({
 }) => {
   const router = useRouter()
 
-  const handleBack = useCallback(() => router.back(), [])
+  const handleBack = useCallback(() => router.back(), [router])
 
   return (
     <>

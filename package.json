@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "download-schema": "apollo service:download --endpoint=http://localhost:1337/graphql schema/graphql-schema.json",
+    "download-schema": "apollo service:download --endpoint=https://kawiyuki.herokuapp.com/graphql schema/graphql-schema.json",
     "generate-types": "apollo codegen:generate --localSchemaFile=schema/graphql-schema.json --target=typescript --tagName=gql"
   },
   "dependencies": {
