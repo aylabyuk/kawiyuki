@@ -35,16 +35,14 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
         >
           <Image
             className="transform transition-transform duration-500 group-hover:scale-105"
-            src={`${process.env.NEXT_PUBLIC_API}${image?.url}`}
+            src={image!.url}
             alt="test"
-            layout="fill"
             objectFit="cover"
-            width={image!.width || 500}
-            height={image!.height || 500}
+            layout="fill"
           />
         </motion.div>
 
-        <div className="flex-grow p-4 transform transition-colors duration-500 text-white flex flex-col justify-between">
+        <div className="p-4 transform transition-colors duration-500 text-white flex flex-col justify-between">
           <div>
             <p className="mb-3 text-lg">{title}</p>
             <Markdown className="line-clamp-5 font-extralight">

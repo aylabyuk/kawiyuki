@@ -46,7 +46,7 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({
       >
         <Image
           className="rounded-lg shadow-md"
-          src={`${process.env.NEXT_PUBLIC_API}${image.url}`}
+          src={image.url}
           alt="test"
           layout="fill"
           objectFit="cover"

@@ -12,11 +12,7 @@ export const AuthorAbout: React.FC<AuthorAboutProps> = ({
   return (
     <div className="p-4 rounded-sm w-full flex gap-10 lg:gap-4 lg:flex-col items-center lg:min-w-[250px]">
       <div className="relative object-cover w-24 h-24 min-w-[96px] rounded-full overflow-hidden ring-2 ring-warmGray-500 ring-offset-2 shadow-md">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_API}${profilePicture?.url}`}
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src={profilePicture!.url} layout="fill" objectFit="cover" />
       </div>
 
       <div className="flex flex-col items-start lg:items-center text-warmGray-500">

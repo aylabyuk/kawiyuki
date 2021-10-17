@@ -4,7 +4,8 @@ module.exports = {
   images: {
     domains: [
       'localhost',
-      'kawiyuki.herokuapp.com'
+      'kawiyuki.herokuapp.com',
+      'kawiyuki.s3.ap-southeast-1.amazonaws.com'
     ]
   }
 }
