@@ -3,7 +3,8 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: [
-      'localhost'
+      'localhost',
+      'kawiyuki.herokuapp.com'
     ]
   }
 }
