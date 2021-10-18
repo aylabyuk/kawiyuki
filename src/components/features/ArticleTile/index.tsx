@@ -27,7 +27,7 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
   slug,
 }) => {
   return (
-    <Link href={`articles/${slug}`}>
+    <Link href={`articles/${slug}`} as="a">
       <div className="group rounded-md bg-warmGray-500 overflow-hidden cursor-pointer flex flex-col h-[600px] md:h-[500px] lg:h-[540px] xl:h-auto shadow-md">
         <motion.div
           variants={imageVariant}

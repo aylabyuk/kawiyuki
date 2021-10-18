@@ -10,7 +10,7 @@ export const AuthorAbout: React.FC<AuthorAboutProps> = ({
   author: { about, email, fullname, profilePicture },
 }) => {
   return (
-    <div className="p-4 rounded-sm w-full flex gap-10 items-center lg:gap-4 lg:flex-col">
+    <div className="p-4 rounded-sm flex gap-10 items-center lg:gap-4 lg:flex-col">
       <div className="relative object-cover w-24 h-24 min-w-[96px] rounded-full overflow-hidden ring-2 ring-warmGray-500 ring-offset-2 shadow-md">
         <Image
           src={
