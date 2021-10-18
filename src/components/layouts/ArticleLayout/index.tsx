@@ -44,9 +44,9 @@ export const ArticlesLayout: React.FC<ArticleLayoutProps> = ({
           <AuthorAbout author={author!} />
 
           <div className="lg:sticky border-b-2 lg:border-0 top-8 gap-10 flex flex-row py-4 lg:py-0 lg:flex-col justify-center items-center lg:pt-12 lg:gap-6">
-            <ThumbUpIcon className="transform transition-all w-8 text-warmGray-300 hover:text-rose-500 hover:scale-125 cursor-pointer" />
-            <FacebookIcon className="transform transition-all w-8 text-warmGray-300 fill-current hover:text-blue-700 hover:scale-125 cursor-pointer" />
-            <TweeterIcon className="transform transition-all w-8 text-warmGray-300 fill-current hover:text-sky-600 hover:scale-125 cursor-pointer" />
+            <ThumbUpIcon className="transform transition-all w-8 text-rose-300 hover:text-rose-500 hover:scale-125 cursor-pointer" />
+            <FacebookIcon className="transform transition-all w-8 fill-current text-blue-300 hover:text-blue-700 hover:scale-125 cursor-pointer" />
+            <TweeterIcon className="transform transition-all w-8 fill-current text-sky-300 hover:text-sky-600 hover:scale-125 cursor-pointer" />
           </div>
         </div>
 
