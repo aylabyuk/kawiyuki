@@ -29,7 +29,7 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
 }) => {
   return (
     <Link href={`articles/${slug}`} passHref>
-      <a className="group rounded-md bg-warmGray-500 overflow-hidden cursor-pointer flex flex-col h-[600px] md:h-[500px] lg:h-[540px] xl:h-auto shadow-md">
+      <a className="group rounded-md bg-warmGray-500 overflow-hidden cursor-pointer flex flex-col h-[400px] md:h-[500px] lg:h-[540px] xl:h-auto shadow-md">
         <motion.div
           variants={imageVariant}
           className="overflow-hidden relative"
@@ -51,11 +51,11 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
         <div className="p-4 transform transition-colors duration-500 text-white flex flex-col justify-between">
           <div>
             <p className="mb-3 text-lg">{title}</p>
-            <Markdown className="line-clamp-5 font-extralight">
+            <Markdown className="line-clamp-5 text-sm md:text-base font-extralight">
               {content!}
             </Markdown>
           </div>
-          <div className="pt-8 transform transition-all duration-500 self-end text-warmGray-50 group-hover:text-warmGray-900">
+          <div className="pt-2 md:pt-8 transform transition-all duration-500 self-end text-warmGray-50 group-hover:text-warmGray-900">
             READ MORE
           </div>
         </div>

@@ -47,7 +47,8 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({
       >
         <div className="w-full h-full backdrop-filter rounded-lg bg-rose-100 bg-opacity-60 backdrop-blur-2xl border" />
         <Image
-          src={image ? image.large.url : 'https://picsum.photos/500'}
+          className="scale-95"
+          src={image ? image.medium.url : 'https://picsum.photos/500'}
           alt="test"
           layout="fill"
           objectFit="contain"
