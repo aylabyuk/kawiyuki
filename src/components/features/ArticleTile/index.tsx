@@ -27,8 +27,8 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
   slug,
 }) => {
   return (
-    <Link href={`articles/${slug}`} as="a">
-      <div className="group rounded-md bg-warmGray-500 overflow-hidden cursor-pointer flex flex-col h-[600px] md:h-[500px] lg:h-[540px] xl:h-auto shadow-md">
+    <Link href={`articles/${slug}`} passHref>
+      <a className="group rounded-md bg-warmGray-500 overflow-hidden cursor-pointer flex flex-col h-[600px] md:h-[500px] lg:h-[540px] xl:h-auto shadow-md">
         <motion.div
           variants={imageVariant}
           className="overflow-hidden relative"
@@ -50,11 +50,11 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
               {content!}
             </Markdown>
           </div>
-          <a className="pt-8 transform transition-all duration-500 self-end text-warmGray-50 group-hover:text-warmGray-900">
+          <div className="pt-8 transform transition-all duration-500 self-end text-warmGray-50 group-hover:text-warmGray-900">
             READ MORE
-          </a>
+          </div>
         </div>
-      </div>
+      </a>
     </Link>
   )
 }
