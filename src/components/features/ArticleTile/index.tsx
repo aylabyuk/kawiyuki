@@ -35,10 +35,11 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
         >
           <Image
             className="transform transition-transform duration-500 group-hover:scale-105"
-            src={image!.url}
+            src={image ? image.url : 'https://picsum.photos/500'}
             alt="test"
             objectFit="cover"
             layout="fill"
+            sizes="50vw"
           />
         </motion.div>
 

@@ -10,20 +10,28 @@ export const AuthorAbout: React.FC<AuthorAboutProps> = ({
   author: { about, email, fullname, profilePicture },
 }) => {
   return (
-    <div className="p-4 rounded-sm w-full flex gap-10 lg:gap-4 lg:flex-col items-center lg:min-w-[250px]">
+    <div className="p-4 rounded-sm w-full flex gap-10 items-center lg:gap-4 lg:flex-col">
       <div className="relative object-cover w-24 h-24 min-w-[96px] rounded-full overflow-hidden ring-2 ring-warmGray-500 ring-offset-2 shadow-md">
-        <Image src={profilePicture!.url} layout="fill" objectFit="cover" />
+        <Image
+          src={
+            profilePicture ? profilePicture.url : 'https://i.pravatar.cc/300'
+          }
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
 
       <div className="flex flex-col items-start lg:items-center text-warmGray-500">
         <span className="font-thin leading-10">about the author</span>
-        <span className="text-center leading-9">{`Hi! I am ${fullname}.`}</span>
-        <p className="font-light mt-2 lg:text-center">{about}</p>
+        <span className="text-left lg:text-center lg:leading-9">{`Hi! I am ${fullname}.`}</span>
+        <p className="font-light mt-2 min-w-[200px] lg:text-center break-words lg:max-w-xs">
+          {about}
+        </p>
 
         <p className="font-thin text-center mt-4">shoot me an email at:</p>
         <a
           href={`mailto:${email}`}
-          className="font-light text-center text-rose-500 cursor-pointer hover:text-rose-400"
+          className="font-light lg:text-center text-rose-500 cursor-pointer text-left hover:text-rose-400 break-all"
         >
           {email}
         </a>

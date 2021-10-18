@@ -46,12 +46,10 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({
       >
         <Image
           className="rounded-lg shadow-md"
-          src={image.url}
+          src={image ? image.url : 'https://picsum.photos/500'}
           alt="test"
           layout="fill"
           objectFit="cover"
-          width={image.width || 500}
-          height={image.height || 500}
         />
       </motion.div>
 

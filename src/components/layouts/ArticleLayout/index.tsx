@@ -40,7 +40,7 @@ export const ArticlesLayout: React.FC<ArticleLayoutProps> = ({
       />
 
       <div className="flex flex-col-reverse lg:flex-row gap-4 content-center">
-        <div className="flex flex-col-reverse lg:flex-col">
+        <div className="flex flex-col-reverse lg:flex-col max-w-sm">
           <AuthorAbout author={author!} />
 
           <div className="lg:sticky border-b-2 lg:border-0 top-8 gap-10 flex flex-row py-4 lg:py-0 lg:flex-col justify-center items-center lg:pt-12 lg:gap-6">

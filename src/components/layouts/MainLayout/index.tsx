@@ -15,7 +15,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   )
 
   return (
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col justify-between h-screen overflow-x-hidden">
       <div className="px-4 md:px-5 lg:px-8 xl:px-44 2xl:px-96 mb-auto">
         <Header
           onHamburgerClick={handleHumbergerClick}
