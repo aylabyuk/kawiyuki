@@ -3,21 +3,21 @@ import Image from 'next/image'
 import formatDistance from 'date-fns/formatDistance'
 import ClockIcon from '@heroicons/react/outline/ClockIcon'
 import { motion } from 'framer-motion'
-import { SingleArticle_articles_image } from '../../../apollo/__generated__/SingleArticle'
+import { ImageFormats } from '../../../apollo/jsonModels/ImageFormats'
 
 export interface ArticleHeroProps {
   title: string
-  image: SingleArticle_articles_image
+  image: ImageFormats
   published: Date
   minutesRead: string
 }
 
 const heroVariant = {
   hidden: {
-    x: 100,
+    opacity: 0,
   },
   visible: {
-    x: 0,
+    opacity: 1,
   },
 }
 
@@ -39,17 +39,19 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({
   return (
     <div className="h-[60vh] relative mb-14">
       <motion.div
-        className="absolute w-full h-full"
+        className="absolute w-full h-full bg-cover rounded-lg shadow-md"
         variants={heroVariant}
         initial="hidden"
         animate="visible"
+        style={{ backgroundImage: `url(${image.thumbnail.url})` }}
       >
+        <div className="w-full h-full backdrop-filter rounded-lg bg-rose-100 bg-opacity-60 backdrop-blur-2xl border" />
         <Image
-          className="rounded-lg shadow-md"
-          src={image ? image.url : 'https://picsum.photos/500'}
+          src={image ? image.large.url : 'https://picsum.photos/500'}
           alt="test"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
+          priority
         />
       </motion.div>
 

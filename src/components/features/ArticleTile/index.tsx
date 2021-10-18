@@ -5,6 +5,7 @@ import Markdown from 'react-markdown'
 import { motion } from 'framer-motion'
 
 import { FeaturedArticles_articles } from '../../../apollo/__generated__/FeaturedArticles'
+import { ImageFormats } from '../../../apollo/jsonModels/ImageFormats'
 
 const imageVariant = {
   hidden: {
@@ -35,7 +36,11 @@ export const ArticleTile: React.FC<FeaturedArticles_articles> = ({
         >
           <Image
             className="transform transition-transform duration-500 group-hover:scale-105"
-            src={image ? image.url : 'https://picsum.photos/500'}
+            src={
+              image
+                ? (image.formats as ImageFormats).small.url
+                : 'https://picsum.photos/500'
+            }
             alt="test"
             objectFit="cover"
             layout="fill"

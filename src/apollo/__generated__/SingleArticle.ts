@@ -9,7 +9,7 @@
 
 export interface SingleArticle_articles_author_profilePicture {
   __typename: "UploadFile";
-  url: string;
+  formats: any | null;
 }
 
 export interface SingleArticle_articles_author {
@@ -22,9 +22,7 @@ export interface SingleArticle_articles_author {
 
 export interface SingleArticle_articles_image {
   __typename: "UploadFile";
-  url: string;
-  width: number | null;
-  height: number | null;
+  formats: any | null;
 }
 
 export interface SingleArticle_articles {

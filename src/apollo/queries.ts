@@ -12,14 +12,11 @@ export const GET_FEATURED_ARTICLES = gql`
         id
         username
         profilePicture {
-          url
+          formats
         }
       }
       image {
-        id
-        url
-        width
-        height
+        formats
       }
     }
   }
@@ -35,14 +32,12 @@ export const GET_SINGLE_ARTICLE = gql`
         email
         about
         profilePicture {
-          url
+          formats
         }
       }
       content
       image {
-        url
-        width
-        height
+        formats
       }
     }
   }

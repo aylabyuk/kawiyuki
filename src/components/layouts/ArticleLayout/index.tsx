@@ -33,7 +33,7 @@ export const ArticlesLayout: React.FC<ArticleLayoutProps> = ({
       </button>
 
       <ArticleHero
-        image={image!}
+        image={image.formats}
         title={title!}
         published={new Date(published_at)}
         minutesRead={calculateReadTime(content || '')}
