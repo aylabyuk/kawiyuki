@@ -19,6 +19,7 @@ export const AuthorAbout: React.FC<AuthorAboutProps> = ({
               ? (profilePicture.formats as ImageFormats).thumbnail.url
               : 'https://i.pravatar.cc/300'
           }
+          alt=""
           layout="fill"
           objectFit="cover"
         />

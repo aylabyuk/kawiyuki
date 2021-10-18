@@ -8,12 +8,12 @@ export interface MenuItemProps {
 
 export const MenuItem: React.FC<MenuItemProps> = ({ path, children }) => {
   return (
-    <Link href={path}>
-      <button className="text-xl px-2 py-3 w-max">
+    <Link href={path} passHref>
+      <a className="text-xl px-2 py-3 w-max">
         <span className={'font-semibold transform text-rose-600'}>
           {children}
         </span>
-      </button>
+      </a>
     </Link>
   )
 }
